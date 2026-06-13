@@ -194,9 +194,9 @@ def part3_statistical_analysis(conn):
 
         bp = axes[i].boxplot(
             [non_responders, responders],
-            labels=["Non-Responders", "Responders"],
             patch_artist=True
         )
+        axes[i].set_xticklabels(["Non-Responders", "Responders"])
         bp['boxes'][0].set_facecolor('#FF6B6B')
         bp['boxes'][1].set_facecolor('#4ECDC4')
 
